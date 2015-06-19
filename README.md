@@ -4,7 +4,7 @@
 # Methods
 
 #### - [UIView setAllowsInteractionOnSubviewsOutside:] ####
-Default is NO. If set to YES, a view will deliver events (such as Touch Event) to any **subview hit**, although the subview is displaying outside bounds of it's superview.
+Default is NO. If set to YES, a view will deliver events (such as Touch Event) to any **subview hit**, although the subview is displaying outside the bounds of it's superview.
 
 
 #### - [UIView setAllowsInteractionOnSubviews:] ####
