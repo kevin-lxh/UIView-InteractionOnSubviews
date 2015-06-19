@@ -80,6 +80,14 @@ static NSDictionary * propertyDefaultValues;
 }
 
 #pragma mark - Public
+- (void)setAllowsInteractionOnSubviewsOutside:(BOOL)allowsInteractionOnSubviewsOutside {
+    objc_setAssociatedObject(self, kPropertyAllowsInteractionOnSubviewsOutside, @(allowsInteractionOnSubviewsOutside), OBJC_ASSOCIATION_RETAIN);
+}
+
+- (BOOL)allowsInteractionOnSubviewsOutside {
+    return [[self valueForProperty:kPropertyAllowsInteractionOnSubviewsOutside] boolValue];
+}
+
 - (void)setAllowsInteractionOnSubviews:(BOOL)allowsInteractionOnSubviews {
     objc_setAssociatedObject(self, kPropertyAllowsInteractionOnSubviews, @(allowsInteractionOnSubviews), OBJC_ASSOCIATION_RETAIN);
 }
@@ -88,12 +96,5 @@ static NSDictionary * propertyDefaultValues;
     return [[self valueForProperty:kPropertyAllowsInteractionOnSubviews] boolValue];
 }
 
-- (void)setAllowsInteractionOnSubviewsOutside:(BOOL)allowsInteractionOnSubviewsOutside {
-    objc_setAssociatedObject(self, kPropertyAllowsInteractionOnSubviewsOutside, @(allowsInteractionOnSubviewsOutside), OBJC_ASSOCIATION_RETAIN);
-}
-
-- (BOOL)allowsInteractionOnSubviewsOutside {
-    return [[self valueForProperty:kPropertyAllowsInteractionOnSubviewsOutside] boolValue];
-}
 
 @end

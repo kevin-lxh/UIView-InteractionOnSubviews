@@ -10,7 +10,7 @@
 
 @interface UIView (InteractionOnSubviews)
 
-- (void)setAllowsInteractionOnSubviews:(BOOL)allowsInteractionOnSubviews; // default is YES
 - (void)setAllowsInteractionOnSubviewsOutside:(BOOL)allowsInteractionOnSubviewsOutside; // defaults is NO
+- (void)setAllowsInteractionOnSubviews:(BOOL)allowsInteractionOnSubviews; // default is YES
 
 @end
