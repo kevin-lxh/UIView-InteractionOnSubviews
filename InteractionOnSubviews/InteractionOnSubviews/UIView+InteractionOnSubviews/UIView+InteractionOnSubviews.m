@@ -69,7 +69,7 @@ static NSDictionary * propertyDefaultValues;
 }
 
 #pragma mark - Private
-- (id)valueForProperty:(NSString*)property {
+- (id)valueForCustomProperty:(NSString*)property {
     NSString *value = objc_getAssociatedObject(self, (__bridge const void *)(property));
     
     if (value == nil) {
@@ -85,7 +85,7 @@ static NSDictionary * propertyDefaultValues;
 }
 
 - (BOOL)allowsInteractionOnSubviewsOutside {
-    return [[self valueForProperty:kPropertyAllowsInteractionOnSubviewsOutside] boolValue];
+    return [[self valueForCustomProperty:kPropertyAllowsInteractionOnSubviewsOutside] boolValue];
 }
 
 - (void)setAllowsInteractionOnSubviews:(BOOL)allowsInteractionOnSubviews {
@@ -93,7 +93,7 @@ static NSDictionary * propertyDefaultValues;
 }
 
 - (BOOL)allowsInteractionOnSubviews {
-    return [[self valueForProperty:kPropertyAllowsInteractionOnSubviews] boolValue];
+    return [[self valueForCustomProperty:kPropertyAllowsInteractionOnSubviews] boolValue];
 }
 
 
