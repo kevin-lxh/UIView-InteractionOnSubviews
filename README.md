@@ -12,5 +12,5 @@ Default is YES. If set to NO, a view will become the responder to handle user ev
 ```
 [self setAllowsInteractionOnSubviews:NO]
 is equal to
-set (userInteractionEnabled = NO) for self.subviews
+set (userInteractionEnabled = NO) for all self.subviews
 ```
